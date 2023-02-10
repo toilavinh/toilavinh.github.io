@@ -1,0 +1,238 @@
+:root {
+    --bg-color: linear-gradient(264deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    --shadow: 0 8px 60px -10px rgb(13 28 39 / 60%);
+    --text-color: #000;
+    --shadow-links: 0 4px 8px rgb(120 64 190 / 60%);
+
+    --bg-red-color: linear-gradient(264deg, rgba(131,58,180,1) 0%, rgba(253,29,29,0.6559873949579832) 50%, rgba(252,176,69,1) 100%);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s;
+    font-family: 'Quicksand', sans-serif;
+}
+
+*::selection {
+    background-color: rgba(143, 14, 235, 0.619);
+}
+
+
+a {
+    text-decoration: none;
+}
+
+.c-3 {
+    width: 45%;
+}
+
+.c-7 {
+    width: 55%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+/* ====== Color Back ==== */
+.bg-color {
+    background: var(--bg-color) !important;
+}
+
+.bg-red {
+    background: var(--bg-red-color) !important;
+}
+
+.control-color {
+    height: 30px;
+    width: 30px;
+    background: var(--bg-red-color);
+    border: 3px solid #fff;
+    box-shadow: var(--shadow);
+    border-radius: 50%;
+    position: fixed;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.control-color-shadow {
+    box-shadow: 0 0 0 1200px ;
+}
+
+/* ======== main ========= */
+
+.wrapper {
+    background: var(--bg-color);
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    -webkit-transition: background 2s;
+    transition: background 2s;
+}
+
+.container {
+    min-width: 580px;
+    background-color: #fff;
+    box-shadow: var(--shadow);
+    border-radius: 14px;
+    padding-bottom: 12px;
+}
+
+/* ======= user ===== */
+
+.user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    transform: translateY(-35%);
+}
+
+#avatar {
+    width: 180px;
+    height: 180px;
+    margin-bottom: 12px;
+
+    box-shadow: var(--shadow);
+    border-radius: 50%;
+    border: 4px solid #fff;
+
+    background-image: url(img/black.jpg);
+    background-size: contain;
+    cursor: pointer;
+}
+
+#name-user {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+#address {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 6px;
+    cursor: pointer;
+}
+
+#address i {
+    margin-right: 6px;
+}
+
+#address a {
+    color: var(--text-color);
+}
+
+#address a:hover {
+    color: blueviolet;
+}
+/* ====== item link ======== */
+
+#contents {
+    width: 100%;
+    margin-top: -40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.link {
+    min-height: 54px;
+    width: 330px;
+    background: var(--bg-color);
+    margin-bottom: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+
+    box-shadow: var(--shadow-links)
+}
+
+.link:hover {
+    scale: 1.04;
+}
+
+.icon {
+    font-size: 30px;
+    display: block;
+    text-align: center;
+}
+
+.recommended {
+    color: rgba(231, 105, 26, 0.854);
+}
+
+.spotify {
+    color: rgb(23, 170, 75);
+    
+}
+
+.instagram {
+    color: rgb(215, 27, 49);
+}
+
+.house {
+    color: rgba(115, 0, 255, 0.833);
+}
+
+.text-content {
+    color: var(--text-color);
+    font-weight: 600;
+    display: inline-block;
+}
+
+/* ============ video ============ */
+#box-video {
+    display: none;
+}
+
+.video-mp4 {
+    width: 332px;
+    height: auto;
+    margin-top: -10px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    border: 2px solid rgba(0, 0, 0, 0.731);
+}
+
+
+
+/* ==== Responsive ====  */
+@media (min-width: 410px) and (max-width: 660px) {
+    .container {
+        min-width: 360px;
+    }
+
+}
+
+@media (max-width: 410px) {
+    .container {
+        min-width: 320px;
+    }
+
+    .link, .video-mp4 {
+        width: 280px;
+        margin-bottom: 28px;
+    }
+
+    .c-3 {
+        width: 40%;
+    }
+
+    .c-7  {
+        width: 60%;
+    }
+}
