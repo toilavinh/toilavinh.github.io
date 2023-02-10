@@ -235,4 +235,9 @@ a {
     .c-7  {
         width: 60%;
     }
+    
+    .control-color {
+        height: 40px;
+        width: 40px;
+    }
 }
